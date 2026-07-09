@@ -170,6 +170,20 @@
 
   footer.pagefoot { margin-top:60px; padding-top:20px; border-top:1px solid var(--line); font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--ink-faint); }
 
+  /* flow nav: prev/next footer, auto-injected per section */
+  .flownav {
+    display:flex; justify-content:space-between; gap:16px; margin-top:50px; padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .flownav a {
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-soft);
+    text-decoration:none; padding:10px 16px; border:1px solid var(--line); border-radius:6px;
+    max-width:46%; transition:border-color 0.15s, color 0.15s;
+  }
+  .flownav a:hover { border-color:var(--ochre); color:var(--ochre); }
+  .flownav a.next { margin-left:auto; text-align:right; }
+  .flownav .flowlabel { display:block; font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-faint); margin-bottom:3px; }
+
   /* mobile */
   @media (max-width:880px) {
     .app { flex-direction:column; }
@@ -189,45 +203,40 @@
     </div>
 
     <div class="navgroup">
-      <div class="navgroup-label">Foundation</div>
+      <div class="navgroup-label">Why &amp; Where</div>
       <a class="navlink" data-s="1"><span class="n">01</span> Vision</a>
       <a class="navlink" data-s="2"><span class="n">02</span> Market Thesis</a>
-    </div>
-    <div class="navgroup">
-      <div class="navgroup-label">Market Intelligence</div>
       <a class="navlink" data-s="3"><span class="n">03</span> Opportunity Landscape</a>
       <a class="navlink" data-s="8"><span class="n">08</span> Opportunity Matrix</a>
     </div>
     <div class="navgroup">
-      <div class="navgroup-label">Personas &amp; Buying Committees</div>
+      <div class="navgroup-label">Who</div>
       <a class="navlink" data-s="4"><span class="n">04</span> Enterprise Personas</a>
       <a class="navlink" data-s="5"><span class="n">05</span> Buying Committees</a>
       <a class="navlink" data-s="6"><span class="n">06</span> Business Problem Library</a>
       <a class="navlink" data-s="7"><span class="n">07</span> Digital Employee Catalogue</a>
     </div>
     <div class="navgroup">
-      <div class="navgroup-label">Commercial &amp; Growth Engine</div>
+      <div class="navgroup-label">How</div>
       <a class="navlink" data-s="9"><span class="n">09</span> Commercial Motion</a>
       <a class="navlink" data-s="10"><span class="n">10</span> Growth Motion</a>
       <a class="navlink" data-s="11"><span class="n">11</span> Adoption Journey</a>
+    </div>
+    <div class="navgroup">
+      <div class="navgroup-label">Measure</div>
+      <a class="navlink" data-s="12"><span class="n">12</span> North Star Metrics</a>
+      <a class="navlink" data-s="13"><span class="n">13</span> Operating Dashboard</a>
+    </div>
+    <div class="navgroup">
+      <div class="navgroup-label">Compound</div>
       <a class="navlink" data-s="14"><span class="n">14</span> Commercial Loops</a>
       <a class="navlink" data-s="15"><span class="n">15</span> Growth Loops</a>
       <a class="navlink" data-s="16"><span class="n">16</span> Expansion Loops</a>
     </div>
     <div class="navgroup">
-      <div class="navgroup-label">Metrics &amp; Operating System</div>
-      <a class="navlink" data-s="12"><span class="n">12</span> North Star Metrics</a>
-      <a class="navlink" data-s="13"><span class="n">13</span> Operating Dashboard</a>
-      <a class="navlink" data-s="18"><span class="n">18</span> Operating Rhythm</a>
-    </div>
-    <div class="navgroup">
-      <div class="navgroup-label">Execution</div>
+      <div class="navgroup-label">Do</div>
       <a class="navlink" data-s="17"><span class="n">17</span> 90-Day Execution Plan</a>
-    </div>
-    <div class="navgroup">
-      <div class="navgroup-label">Synthesis</div>
-      <a class="navlink" data-s="19"><span class="n">19</span> Why Lua Wins</a>
-      <a class="navlink" data-s="20"><span class="n">20</span> Appendix &amp; Sources</a>
+      <a class="navlink" data-s="18"><span class="n">18</span> Operating Rhythm</a>
     </div>
   </nav>
 
@@ -235,18 +244,17 @@
     <section class="psec" id="s1">
   <div class="crumb">01 · Foundation</div>
   <h2 class="title">Vision</h2>
-  <p class="dek">Lua builds digital employees — agents that do a real job end to end, on a company's own systems, and get a little better every time they run. Not chatbots that answer. Workers that act.</p>
+  <p class="dek">The barrier to winning Kenya isn't the technology. It's proving a digital employee can be trusted with a real job.</p>
   <div class="why">
     <span class="label">Why this page exists</span>
     <div class="why-grid">
-      <div><div class="k">Trace to</div><div class="v">Everything downstream — every industry, persona, and metric in this system exists to make this vision real in Kenya specifically</div></div>
-      <div><div class="k">Downstream if this changes</div><div class="v">If the vision drifts toward "AI platform" instead of "digital employee," the whole commercial motion (Section 9) reverts to feature-selling, which this system explicitly argues against</div></div>
+      <div><div class="k">Trace to</div><div class="v">Everything downstream — every industry, persona, and metric in this system exists to make this real in Kenya specifically</div></div>
+      <div><div class="k">Downstream if this changes</div><div class="v">If the framing drifts toward "AI platform" instead of "digital employee," the whole commercial motion (Section 9) reverts to feature-selling, which this system explicitly argues against</div></div>
     </div>
   </div>
   <div class="section-body">
-    <p>Lua's own words: teams write their logic on Lua — agents, skills, tools, jobs, webhooks — and Lua runs the hard parts underneath: infrastructure, multi-provider model orchestration, data, channels, monitoring. Customers keep everything they build. <span class="tag-badge sourced">sourced</span></p>
-    <div class="pullquote">The vision isn't "AI in the enterprise." It's a company hiring its next employee — who happens to be digital.</div>
-    <p>That distinction is the whole operating system. Every section below traces back to it: which industries feel this problem most acutely (03, 08), who has to say yes inside those companies (04, 05), what job gets automated first (06, 07), how the sale actually happens (09–11), how progress gets measured (12–13), and what the first year looks like in practice (17–18).</p>
+    <div class="pullquote">Not "AI in the enterprise." A company hiring its next employee — who happens to be digital.</div>
+    <p>That distinction is the whole operating system. This follows one path — Why &amp; Where, Who, How, Measure, Compound, Do — each section leads to the next, in the sidebar order. Which industries feel this problem most acutely (03, 08), who has to say yes inside those companies (04, 05), what job gets automated first (06, 07), how the sale actually happens (09–11), how progress gets measured (12–13), how it compounds (14–16), and what the first year looks like in practice (17–18).</p>
   </div>
 </section>
 
@@ -266,7 +274,7 @@
     <p>They don't. Kenya's Central Bank ran a formal 2025 survey of banks: <strong>50% of lenders are already using AI</strong> — mostly for credit scoring (65% of adopters). <span class="tag-badge sourced">sourced</span> Safaricom, Absa, and KCB all run live chatbots. Kenya Power shipped an AI chatbot in October 2025. KRA now runs mandatory automated cross-validation on every tax return. <span class="tag-badge sourced">sourced</span></p>
     <p>The real barrier surfaced this year: Safaricom's "Zuri" chatbot is the subject of a 2026 High Court petition alleging customers get funneled into automated flows with no reliable escalation to a human. <span class="tag-badge sourced">sourced</span> That's not an AI-awareness problem — it's a trust-and-design problem. The market has already tried AI that answers. It's ready for AI that acts responsibly, with a human always reachable.</p>
     <h3>Assumption to invert: "the integration challenge is Slack vs. Outlook"</h3>
-    <p>Neither, really. Kenyan enterprises run on WhatsApp (~97% penetration, already the primary channel for KCB, Equity, Britam, and Jubilee) <span class="tag-badge sourced">sourced</span>, a fragmented ERP layer (Sage for SME finance/payroll, SAP Business One or Oracle NetSuite for larger firms — no single dominant stack) <span class="tag-badge reasoned">reasoned, vendor-listing sources not adoption survey</span>, and Microsoft 365 as the incumbent at large/established enterprises with Google Workspace stronger among SMEs and startups <span class="tag-badge reasoned">directional, no rigorous Kenya-specific study found</span>. Lua's actual confirmed channel list — WhatsApp, Instagram, Facebook Messenger, Email, WebChat, Slack, HTTP API — matches the consumer/social layer far better than it matches any single enterprise back-office stack. <span class="tag-badge sourced">sourced, docs.heylua.ai</span></p>
+    <p>Neither, really. Kenyan enterprises run on WhatsApp (~97% penetration, already the primary channel for KCB, Equity, Britam, and Jubilee) <span class="tag-badge sourced">sourced</span>, a fragmented ERP layer (Sage for SME finance/payroll, SAP Business One or Oracle NetSuite for larger firms — no single dominant stack) <span class="tag-badge reasoned">reasoned, vendor-listing sources not adoption survey</span>, and Microsoft 365 as the incumbent at large/established enterprises with Google Workspace stronger among SMEs and startups <span class="tag-badge reasoned">directional, no rigorous Kenya-specific study found</span>. That consumer/social layer is where the channel list should lead — it matches Kenya far better than any single enterprise back-office stack does.</p>
     <div class="callout">
       <p><strong>The thesis:</strong> win by being the agent that acts safely, escalates honestly, and shows up where the business already talks to its customers (WhatsApp) — not by out-featuring the chatbots that are already live and already losing trust.</p>
     </div>
@@ -461,10 +469,10 @@
         <thead><tr><th>Motion</th><th>Entry point</th><th>Owner</th><th>Success metric</th></tr></thead>
         <tbody>
           <tr><td><strong>Expansion</strong></td><td>First Digital Employee proves value → propose the adjacent job in the same account</td><td>Commercial Lead + Implementation Lead</td><td>Second Digital Employee live per account</td></tr>
-          <tr><td><strong>Partner</strong></td><td>Lua's own "Implementation Network" model — local systems integrators as delivery partners</td><td>Commercial Lead, sourcing local partners</td><td>1+ active implementation partner in Kenya within 6 months</td></tr>
-          <tr><td><strong>Community</strong></td><td>Kenya AI/tech community — Lua's own CEO is already speaking at Startup Grind Nairobi (Aug 2026) <span class="tag-badge sourced">sourced</span></td><td>Commercial Lead, presence &amp; relationship-building</td><td>Warm inbound from community presence</td></tr>
-          <tr><td><strong>Referral</strong></td><td>Founder-to-founder network already built (Section 19) + satisfied economic sponsors</td><td>Commercial Lead</td><td>% of pipeline sourced via referral by month 6</td></tr>
-          <tr><td><strong>Product feedback</strong></td><td>The JD's own mandate: "feed market insight back into Lua's positioning, packaging, pricing and GTM strategy" <span class="tag-badge sourced">sourced, from JD</span></td><td>Commercial Lead → Lua product/founders</td><td>Quarterly structured feedback loop (Section 18)</td></tr>
+          <tr><td><strong>Partner</strong></td><td>Local systems integrators as delivery partners for technical implementation</td><td>Commercial Lead, sourcing local partners</td><td>1+ active implementation partner in Kenya within 6 months</td></tr>
+          <tr><td><strong>Community</strong></td><td>Kenya AI/tech community presence — Startup Grind Nairobi (Aug 2026) <span class="tag-badge sourced">sourced</span></td><td>Commercial Lead, presence &amp; relationship-building</td><td>Warm inbound from community presence</td></tr>
+          <tr><td><strong>Referral</strong></td><td>Founder-to-founder network + satisfied economic sponsors</td><td>Commercial Lead</td><td>% of pipeline sourced via referral by month 6</td></tr>
+          <tr><td><strong>Product feedback</strong></td><td>Structured feedback on Kenya-specific positioning, packaging, and pricing</td><td>Commercial Lead → product/founders</td><td>Quarterly structured feedback loop (Section 18)</td></tr>
         </tbody>
       </table>
     </div>
@@ -503,7 +511,7 @@
         <thead><tr><th>Candidate</th><th>Verdict</th></tr></thead>
         <tbody>
           <tr><td>Enterprise AI Adoption Rate</td><td>Too vague and lagging — hard to attribute to commercial effort specifically</td></tr>
-          <tr><td>Time to Paid Pilot</td><td>Strong leading indicator, matches the JD's own 90-day KPI — but doesn't capture whether the pilot actually delivered value</td></tr>
+          <tr><td>Time to Paid Pilot</td><td>Strong leading indicator, matches the 90-day KPI for this role — but doesn't capture whether the pilot actually delivered value</td></tr>
           <tr><td>Pilot-to-Production Conversion</td><td>Critical, but this is a company-wide product+delivery metric more than a purely commercial one</td></tr>
           <tr><td>Expansion Velocity</td><td>The right metric once a base of production clients exists — too early for a market-opening role in year one</td></tr>
           <tr><td>Business Processes Automated</td><td>Good qualitative proxy (count of live Digital Employees) but not inherently commercial</td></tr>
@@ -532,7 +540,7 @@
     <div class="cardgrid">
       <div class="card"><div class="eyebrow">Pipeline</div><div class="name">By industry &amp; tier</div><div class="desc">Count of active conversations in near/mid/long-tier industries (Section 08), weighted by buying-committee stage (Section 11)</div></div>
       <div class="card"><div class="eyebrow">North Star</div><div class="name">Time to First Business Value</div><div class="desc">Per active engagement, tracked from signed date to first measured outcome</div></div>
-      <div class="card"><div class="eyebrow">Compliance</div><div class="name">ODPC registration status</div><div class="desc">Per the Kenya Data Protection Act — tracked per active or pending engagement, given the extraterritorial registration requirement confirmed in Section 20</div></div>
+      <div class="card"><div class="eyebrow">Compliance</div><div class="name">ODPC registration status</div><div class="desc">Per the Kenya Data Protection Act's extraterritorial registration requirement — tracked per active or pending engagement</div></div>
       <div class="card"><div class="eyebrow">Relationships</div><div class="name">Executive network map</div><div class="desc">Status of relationship-build-now accounts (banks, hospitals, telecom) per Section 08's mid-term tier</div></div>
     </div>
   </div>
@@ -594,7 +602,7 @@
 <section class="psec" id="s17">
   <div class="crumb">17 · Execution</div>
   <h2 class="title">90-Day Execution Plan</h2>
-  <p class="dek">The JD's own KPI, scoped honestly against everything above.</p>
+  <p class="dek">The 90-day KPI, scoped honestly against everything above.</p>
   <div class="section-body">
     <div class="timeline">
       <div class="tlnode">
@@ -613,7 +621,7 @@
         <span class="day">DAY 61–90</span>
         <h4>Land the first signed, paid client</h4>
         <p>A retail or SACCO Digital Employee — not a bank contract. Start structured relationship-building with 1–2 banks/insurers in parallel.</p>
-        <div class="success"><b>Success</b>1 signed + paid client live, matching the JD's own measure</div>
+        <div class="success"><b>Success</b>1 signed + paid client live, matching the role's own 90-day measure</div>
       </div>
       <div class="tlnode">
         <span class="day">DAY 91–120</span>
@@ -642,47 +650,10 @@
         <tbody>
           <tr><td><strong>Weekly</strong></td><td>Pipeline by industry/tier; Time to Paid Pilot per active conversation</td><td>Section 08 tiers, Section 12 leading metric</td></tr>
           <tr><td><strong>Monthly</strong></td><td>ODPC/compliance status per live engagement; executive relationship map</td><td>Section 13 dashboard</td></tr>
-          <tr><td><strong>Quarterly</strong></td><td>Feed learnings back into Lua's positioning, pricing, GTM (per the JD's own mandate); re-rank the Opportunity Matrix against fresh signal</td><td>Section 10 product-feedback motion, Section 08</td></tr>
+          <tr><td><strong>Quarterly</strong></td><td>Feed learnings back into positioning, pricing, and GTM; re-rank the Opportunity Matrix against fresh signal</td><td>Section 10 product-feedback motion, Section 08</td></tr>
         </tbody>
       </table>
     </div>
-  </div>
-</section>
-
-<section class="psec" id="s19">
-  <div class="crumb">19 · Synthesis</div>
-  <h2 class="title">Why Lua Wins</h2>
-  <div class="section-body">
-    <p class="dek" style="font-family:'Source Serif', Georgia, serif; font-style:italic;">Kenya isn't under-aware of AI. It's under-served by agents that act responsibly and show up where trust already lives.</p>
-    <p>Half of Kenya's banks haven't adopted AI at all, and of the half that have, most only use it for credit scoring. <span class="tag-badge sourced">sourced, CBK 2025</span> The chatbots that are live are already generating backlash — Safaricom's Zuri is in court over exactly the failure mode Lua's own architecture is built to avoid: acting without a reliable human escalation path. <span class="tag-badge sourced">sourced</span></p>
-    <p>Lua's confirmed channel list — WhatsApp, Instagram, Facebook Messenger, Slack, Email, HTTP API — matches how Kenyan enterprises actually reach customers today, at ~97% WhatsApp penetration, better than it matches any single back-office system. <span class="tag-badge sourced">sourced</span> And Lua's own founders built their credibility scaling a fintech across East Africa, at Paystack — the same relationship-first, trust-before-scale motion this whole system is built around. <span class="tag-badge sourced">sourced</span></p>
-    <p>The company is already building the regional team to support this: a Head of Sub-Saharan Africa hired, a Kenya Implementation Lead hiring in parallel. <span class="tag-badge sourced">sourced</span> The opportunity isn't to convince Kenya that AI works. It's to be the first vendor here selling a named digital employee, sequenced through the industries that will actually say yes in 90 days — not the ones that sound best in a pitch.</p>
-  </div>
-</section>
-
-<section class="psec" id="s20">
-  <div class="crumb">20 · Synthesis</div>
-  <h2 class="title">Appendix &amp; Sources</h2>
-  <div class="section-body">
-    <h3>Sourced vs. Reasoned — the assumptions log</h3>
-    <p>Every major claim in this system is one of three things: <span class="tag-badge sourced">sourced</span> (a real, cited external source), <span class="tag-badge reasoned">reasoned</span> (a defensible inference from adjacent evidence, clearly not a direct citation), or <span class="tag-badge nodata">no data found</span> (an honest gap, stated rather than papered over). This labeling runs through Sections 03–19 above rather than being repeated here — the discipline is the point, not a separate list.</p>
-    <h3>Product vocabulary (verified, docs.heylua.ai)</h3>
-    <ul class="plain">
-      <li><strong>Agent</strong> = persona + skills. <strong>Skill</strong> = bundled capability (tools + when-to-use guidance). <strong>Tool</strong> = the actual executable function (TypeScript, Zod-validated). <strong>Job</strong> = scheduled/cron-triggered. <strong>Webhook</strong> = event-triggered.</li>
-      <li>No formal "guardrails" term — the real mechanism is <strong>PreProcessors</strong> (screen input) and <strong>PostProcessors</strong> (check output).</li>
-      <li><strong>Confirmed live channels:</strong> Email, WebChat (LuaPop), WhatsApp, Facebook Messenger, Instagram Messenger, Slack, HTTP API. Coming soon: SMS/Twilio, MS Teams, Discord, Telegram, LinkedIn, WeChat.</li>
-      <li><strong>Two build paths, not three products:</strong> code-first CLI (TypeScript/Zod) for developers; a guided natural-language interface plus white-glove Implementation Network for non-technical teams. Enterprise/mid-market is a customer segment, not a third product.</li>
-    </ul>
-    <h3>Compliance requirements confirmed</h3>
-    <ul class="plain">
-      <li>Kenya Data Protection Act 2019 applies extraterritorially — a foreign vendor processing Kenyan residents' data must register with the ODPC if turnover exceeds KES 5M or headcount exceeds 10; certificate valid 2 years.</li>
-      <li>CBK's Guidance Note on Cybersecurity (2017) and Prudential Guidelines on Outsourcing require due diligence and monitoring for any third-party/cloud provider serving a bank.</li>
-    </ul>
-    <h3>Regional watch (Uganda / Tanzania / Rwanda) — light layer, not parity research</h3>
-    <p>Turaco (the microinsurer referenced in Section 03/08 discovery) actually operates across <strong>four</strong> markets — Kenya, Uganda, Ghana, Nigeria — insuring 3.5M+ people, not just Kenya/Uganda as first assumed. <span class="tag-badge sourced">sourced</span> Lua itself shows no confirmed presence in Uganda, Tanzania, or Rwanda beyond a Nairobi-based "Exclusive: East Africa" partner territory — signal of intent, not confirmed local operations. <span class="tag-badge sourced">sourced</span> Kenya is a well-documented regional launchpad (Wasoko operates Kenya/Tanzania/Rwanda/Uganda; Kenya absorbs ~5x the regional investment of the rest of East Africa combined) — supporting Kenya-first, region-later as the right sequencing, not a reason to research the other three markets deeply yet. <span class="tag-badge sourced">sourced</span></p>
-    <h3>Full source list</h3>
-    <p class="src">CBK (Guidance Note on Cybersecurity; Prudential Guidelines on Outsourcing; 2025 AI in Banking survey) · SASRA / FSD Kenya Sub-Sector Report · Kenya Times / CNBC Africa (retail) · IRA draft claims guidelines / Cytonn H1'2025 · Jubilee Insurance · KTN / Christian Daily (SHA backlog) · Safaricom Newsroom / Nation Africa / Eastleigh Voice (Zuri) · Capital FM / Kenyans.co.ke (Airtel) · IJRISS (university ICT readiness) · AFD (TVET EU funding) · KPLC Newsroom · TechTrends / StreamlineFeed (KRA) · The Star (Nairobi Water) · FARA Africa / Google Cloud (Twiga) · NGO Coordination Board · KAM Barometer · Today Africa / TechCabal (Sendy, Lori Systems) · TD Africa / Nuva Technologies (tech stack) · Njaga Advocates / ODPC (Data Protection Act) · PPRA / KRA RFP (QCBS) · heylua.ai / docs.heylua.ai / blog.heylua.ai · Y Combinator company page · TechCabal ("This Kenyan startup...") · Kenyan Wallstreet · M-KOPA newsroom / Turaco · Acumen (East Africa investment pattern)</p>
-    <footer class="pagefoot">THIO WACHIRA — BUILT FOR LUA GLOBAL — 8 JULY 2026 — COMPANION TO REPORT #033</footer>
   </div>
 </section>
 
@@ -707,6 +678,34 @@
   document.querySelectorAll('[data-goto]').forEach(function(el){
     el.addEventListener('click', function(){ show(el.getAttribute('data-goto')); });
   });
+
+  // Reading sequence: Why & Where -> Who -> How -> Measure -> Compound -> Do
+  var sequence = [1,2,3,8,4,5,6,7,9,10,11,12,13,14,15,16,17,18];
+  var titles = {};
+  links.forEach(function(l){ titles[l.dataset.s] = l.textContent.trim().replace(/^\d+\s*/, ''); });
+
+  sequence.forEach(function(id, i){
+    var sec = document.getElementById('s' + id);
+    if (!sec) return;
+    var body = sec.querySelector('.section-body') || sec;
+    var nav = document.createElement('div');
+    nav.className = 'flownav';
+    var prevId = i > 0 ? sequence[i - 1] : null;
+    var nextId = i < sequence.length - 1 ? sequence[i + 1] : null;
+    var html = '';
+    if (prevId) {
+      html += '<a href="#s' + prevId + '" data-goto="' + prevId + '" class="prev"><span class="flowlabel">← Previous</span>' + titles[prevId] + '</a>';
+    }
+    if (nextId) {
+      html += '<a href="#s' + nextId + '" data-goto="' + nextId + '" class="next"><span class="flowlabel">Next →</span>' + titles[nextId] + '</a>';
+    }
+    nav.innerHTML = html;
+    body.appendChild(nav);
+    nav.querySelectorAll('[data-goto]').forEach(function(el){
+      el.addEventListener('click', function(e){ e.preventDefault(); show(el.getAttribute('data-goto')); });
+    });
+  });
+
   var initial = (location.hash || '#s1').replace('#s','');
   show(initial && sections.length ? initial : '1');
 })();
